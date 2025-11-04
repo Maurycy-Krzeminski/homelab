@@ -13,3 +13,5 @@ helm repo update
 helm upgrade --install gitlab gitlab/gitlab --create-namespace --namespace gitlab  --kubeconfig $CLUSTER_CONFIG -f ./confs/values.yaml --timeout 800s
 
 kubectl config use-context k3d-$CLUSTER_NAME
+
+kubectl apply -f ./ingress
