@@ -4,7 +4,7 @@ Import-DotEnv-Value -Path ".\.env"
 
 
 k3d cluster delete $CLUSTER_NAME
-k3d cluster create $CLUSTER_NAME   -p "8081:80@loadbalancer"
+k3d cluster create $CLUSTER_NAME   -p "80:80@loadbalancer"
 
 k3d kubeconfig get $CLUSTER_NAME > $CLUSTER_CONFIG
 

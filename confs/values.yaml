@@ -14,7 +14,7 @@ global:
     tls:
       enabled: false
   hosts:
-    domain: localhost
+    domain: k3d.localhost
     externalIP: 0.0.0.0
     https: false
   # Disable Rails bootsnap cache (temporary)
