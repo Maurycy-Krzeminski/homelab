@@ -10,7 +10,7 @@ k3d kubeconfig get $CLUSTER_NAME > $CLUSTER_CONFIG
 
 helm repo add gitlab https://charts.gitlab.io/
 helm repo update
-helm upgrade --install gitlab gitlab/gitlab --create-namespace --namespace gitlab  --kubeconfig $CLUSTER_CONFIG -f ./confs/values.yaml --timeout 800s
+helm upgrade --install gitlab gitlab/gitlab --create-namespace --namespace $NAMESPACE  --kubeconfig $CLUSTER_CONFIG -f ./confs/values.yaml --timeout 800s
 
 kubectl config use-context k3d-$CLUSTER_NAME
 
